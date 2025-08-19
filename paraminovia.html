@@ -9,21 +9,22 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* Gradiente negro semitransparente sobre la imagen de fondo */
   background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
               url('https://i.pinimg.com/1200x/66/57/42/6657424d49ff2831041a83f30b011918.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center; /* centra vertical */
   min-height: 100vh;
-  overflow-y: auto; /* scroll habilitado */
+  overflow: hidden; /* scroll desactivado al inicio */
+  transition: background 0.8s ease;
 }
 
 #base {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* centra el contenido */
   width: 100%;
   max-width: 800px;
   padding: 20px;
@@ -101,11 +102,6 @@ svg {
   transform: scale(1);
 }
 
-/* sello eliminado */
-/*.sello {
-  display: none;
-}*/
-
 .marca-agua {
   position: fixed;
   bottom: 10px;
@@ -131,7 +127,7 @@ svg {
       <h1>QUERIDA AYLINSITA HERMOSA</h1>
       <p>DE: Edu</p>
       <p>PARA: Mi preciosa hermosa novia :3</p>
-      <p>Desde que entraste en mi vida, todo ha cambiado para mejor, me haces tan feliz mi vida, siempre me quedaré contigo porque eres lo que siempre soñé. Eres la mejor novia del mundo y de todo el universo, te amo mucho mi niña hermosa siempre seras la niña de mis ojitos, siempre te amare, siempre me gustaras, siempre te encantaras, siempre todo, eres mi princesita hermosa bella dulce, qro q sepas q siempre te amare y siempre me quedare contigo en las buenas y las malas, siempre tratare de darte lo mejor mi niña bella pq te lo mereces, me encantas completamente, me tienes bien enamorado amor, qro q tengamos una familia siisis q salgan con tus ojitos tan hermosos mi niña, eres la mejor de el mundo mundial amor, conmigo nunca te sentiras juzgada amor pq yo te tratare de dar lo mejor posible siempre, te lo mereces de verdad, y me encantaria tener todo lleno de fotos tuyas pq esq amor estas bien hermosa y bella sabes, para mi eres mas que perfecta, eres la mejor novia del mundo, siempre seras tu y nadie mas mi niña bella guapa y perfecta, eres la mujer de mi vida y siempre lo seras pq de verdad q qro q seas tu amor, dare lo mejor de mi para que estemos hasta el final de todoooo y tengamos hijitos jejejasj, nunca pero nunca me aburrire de ti mi niña pq eres la mejor de el mundo, me encanta q me presumas y que todo mundo sepa de mi, yo tambien lo hago y siempre te tengo en todos lados jijijsaj pq de verdad q qro q seas tu mi niña, de verdad que seas tu para la eternidad, no hay palabras para expresar lo mucho que te amo mi niña pq es es mas q infinitamente mi nena :3, qro pasar contigo toda la eternidad, abrazarte, besarte, ir a lugares agarraditos de la mano, qro de verdad poder conocerte en persona mi niña bella y que seas eterna, q los 2 estemos juntos por siempre mi bebita hermosa eres mi niña linda y bella y siempre te amare, te vere a ti, jamas te remplazaria, te esconderia algo, ni le hablaria a otra mujer nono aparte no amor yo solo necesito hablarte a ti y te necesito a ti a ti, tutututu y siempre seras tu mi niña hermosa :3</p>
+      <p>Desde que entraste en mi vida, todo ha cambiado para mejor, siempre me quedaré contigo porque eres lo que siempre soñé. Eres la mejor novia del mundo y de todo el universo, te amo mucho mi niña hermosa siempre seras la niña de mis ojitos, siempre te amare, siempre me gustaras, siempre te encantaras, siempre todo, eres mi princesita hermosa bella dulce, qro q sepas q siempre te amare y siempre me quedare contigo en las buenas y las malas, siempre tratare de darte lo mejor mi niña bella pq te lo mereces, me encantas completamente, me tienes bien enamorado amor, qro q tengamos una familia siisis q salgan con tus ojitos tan hermosos mi niña, eres la mejor de el mundo mundial amor, conmigo nunca te sentiras juzgada amor pq yo te tratare de dar lo mejor posible siempre, te lo mereces de verdad, y me encantaria tener todo lleno de fotos tuyas pq esq amor estas bien hermosa y bella sabes, para mi eres mas que perfecta, eres la mejor novia del mundo, siempre seras tu y nadie mas mi niña bella guapa y perfecta, eres la mujer de mi vida y siempre lo seras pq de verdad q qro q seas tu amor, dare lo mejor de mi para que estemos hasta el final de todoooo y tengamos hijitos jejejasj, nunca pero nunca me aburrire de ti mi niña pq eres la mejor de el mundo, me encanta q me presumas y que todo mundo sepa de mi, yo tambien lo hago y siempre te tengo en todos lados jijijsaj pq de verdad q qro q seas tu mi niña, de verdad que seas tu para la eternidad, no hay palabras para expresar lo mucho que te amo mi niña pq es es mas q infinitamente mi nena :3, qro pasar contigo toda la eternidad, abrazarte, besarte, ir a lugares agarraditos de la mano, qro de verdad poder conocerte en persona mi niña bella y que seas eterna, q los 2 estemos juntos por siempre mi bebita hermosa eres mi niña linda y bella y siempre te amare, te vere a ti, jamas te remplazaria, te esconderia algo, ni le hablaria a otra mujer nono aparte no amor yo solo necesito hablarte a ti y te necesito a ti a ti, tutututu y siempre seras tu mi niña hermosa :3</p>
       <p>Con todo mi amor,</p>
       <p>Edu.</p>
     </div>
@@ -145,6 +141,7 @@ const fill = document.querySelector('.corazon-fill');
 const contador = document.getElementById('contador');
 const carta = document.getElementById('carta');
 const corazonContainer = document.getElementById('corazon-container');
+const body = document.body;
 
 let porcentaje = 0;
 let llenando = false;
@@ -155,7 +152,9 @@ function actualizarCorazon() {
   if(porcentaje >= 100){
     carta.classList.add('visible');
     contador.textContent = "Corazón lleno :33 💗";
-    corazonContainer.style.marginTop = "50px"; // sube un poco todo
+    corazonContainer.style.marginTop = "30px";
+    body.style.background = 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.pinimg.com/1200x/66/57/42/6657424d49ff2831041a83f30b011918.jpg") no-repeat center center fixed';
+    body.style.overflowY = 'auto'; // habilita scroll cuando aparece la carta
   }
 }
 
