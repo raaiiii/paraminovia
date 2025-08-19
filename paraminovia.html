@@ -1,1 +1,180 @@
-aaawad
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi aylinsita :3</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Gradiente negro semitransparente sobre la imagen de fondo */
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+              url('https://i.pinimg.com/1200x/66/57/42/6657424d49ff2831041a83f30b011918.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-y: auto; /* scroll habilitado */
+}
+
+#base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+#contador {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFD4F9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+#corazon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin-top 1s ease;
+}
+
+svg {
+  width: 180px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.corazon-outline {
+  fill: white;
+  stroke: #FF2B2B;
+  stroke-width: 2;
+}
+
+.corazon-fill {
+  fill: red;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.3s ease;
+}
+
+.carta {
+  background: url('https://i.pinimg.com/736x/d8/08/a2/d808a2d054dd553336dcc1f52be6aa9f.jpg') no-repeat center center;
+  background-size: cover;
+  display: block;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.carta h1 {
+  color: #ff69b4;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.carta p {
+  color: #FFD4F9;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  line-height: 1.3em;
+}
+
+.carta.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* sello eliminado */
+/*.sello {
+  display: none;
+}*/
+
+.marca-agua {
+  position: fixed;
+  bottom: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<div id="base">
+  <div id="contador">0%</div>
+
+  <div id="corazon-container">
+    <svg viewBox="0 0 100 100" id="corazon-svg">
+      <path class="corazon-outline" d="M50 90 L20 60 A15 15 0 1 1 50 30 A15 15 0 1 1 80 60 Z"/>
+      <path class="corazon-fill" d="M50 90 L20 60 A15 15 0 1 1 50 30 A15 15 0 1 1 80 60 Z"/>
+    </svg>
+
+    <div class="carta" id="carta">
+      <h1>QUERIDA AYLINSITA HERMOSA</h1>
+      <p>DE: Edu</p>
+      <p>PARA: Mi preciosa hermosa novia :3</p>
+      <p>Desde que entraste en mi vida, todo ha cambiado para mejor, siempre me quedaré contigo porque eres lo que siempre soñé. Eres la mejor novia del mundo y de todo el universo, te amo mucho mi niña hermosa siempre seras la niña de mis ojitos, siempre te amare, siempre me gustaras, siempre te encantaras, siempre todo, eres mi princesita hermosa bella dulce, qro q sepas q siempre te amare y siempre me quedare contigo en las buenas y las malas, siempre tratare de darte lo mejor mi niña bella pq te lo mereces, me encantas completamente, me tienes bien enamorado amor, qro q tengamos una familia siisis q salgan con tus ojitos tan hermosos mi niña, eres la mejor de el mundo mundial amor, conmigo nunca te sentiras juzgada amor pq yo te tratare de dar lo mejor posible siempre, te lo mereces de verdad, y me encantaria tener todo lleno de fotos tuyas pq esq amor estas bien hermosa y bella sabes, para mi eres mas que perfecta, eres la mejor novia del mundo, siempre seras tu y nadie mas mi niña bella guapa y perfecta, eres la mujer de mi vida y siempre lo seras pq de verdad q qro q seas tu amor, dare lo mejor de mi para que estemos hasta el final de todoooo y tengamos hijitos jejejasj, nunca pero nunca me aburrire de ti mi niña pq eres la mejor de el mundo, me encanta q me presumas y que todo mundo sepa de mi, yo tambien lo hago y siempre te tengo en todos lados jijijsaj pq de verdad q qro q seas tu mi niña, de verdad que seas tu para la eternidad, no hay palabras para expresar lo mucho que te amo mi niña pq es es mas q infinitamente mi nena :3, qro pasar contigo toda la eternidad, abrazarte, besarte, ir a lugares agarraditos de la mano, qro de verdad poder conocerte en persona mi niña bella y que seas eterna, q los 2 estemos juntos por siempre mi bebita hermosa eres mi niña linda y bella y siempre te amare, te vere a ti, jamas te remplazaria, te esconderia algo, ni le hablaria a otra mujer nono aparte no amor yo solo necesito hablarte a ti y te necesito a ti a ti, tutututu y siempre seras tu mi niña hermosa :3</p>
+      <p>Con todo mi amor,</p>
+      <p>Edu.</p>
+    </div>
+  </div>
+</div>
+
+<div class="marca-agua">Made by Edu</div>
+
+<script>
+const fill = document.querySelector('.corazon-fill');
+const contador = document.getElementById('contador');
+const carta = document.getElementById('carta');
+const corazonContainer = document.getElementById('corazon-container');
+
+let porcentaje = 0;
+let llenando = false;
+
+function actualizarCorazon() {
+  fill.style.clipPath = `inset(${100 - porcentaje}% 0 0 0)`;
+  contador.textContent = porcentaje + '%';
+  if(porcentaje >= 100){
+    carta.classList.add('visible');
+    contador.textContent = "Corazón lleno :33 💗";
+    corazonContainer.style.marginTop = "50px"; // sube un poco todo
+  }
+}
+
+document.getElementById('corazon-svg').addEventListener('click', () => {
+  llenando = true;
+  porcentaje += 5;
+  if(porcentaje > 100) porcentaje = 100;
+  actualizarCorazon();
+});
+
+setInterval(() => {
+  if(!llenando && porcentaje > 0 && porcentaje < 100){
+    porcentaje -= 2;
+    if(porcentaje < 0) porcentaje = 0;
+    actualizarCorazon();
+  }
+  llenando = false;
+}, 100);
+</script>
+
+</body>
+</html>
